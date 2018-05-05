@@ -1,8 +1,10 @@
+## Authors : 
+##  1. Kedar Anavardekar
+##  2. Harsh Mahiswari
+## Subject : EE769-Intoduction To Machine Learning 
+
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
 from sklearn.neural_network import MLPRegressor
-
-
-
 
 def getTestDataframe(inputDataFrame):
     inputDataFrame.drop('Id', axis=1, inplace=True)
@@ -29,7 +31,7 @@ def writeToCSV(prediction):
         counter = 0
         for i in range(1, noOfsamples):
             for j in range(1, noOfFeatures ):
-                x = "_" #str(i) + "_" + str(j)
+                x = str(i) + "_" + str(j)
                 toWrite = x + "," + str(prediction[k]) + "\n"
                 file.write( toWrite )
                 counter = counter + 1
